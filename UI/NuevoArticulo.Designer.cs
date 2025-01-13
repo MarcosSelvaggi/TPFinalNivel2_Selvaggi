@@ -44,7 +44,6 @@
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.botonAgregarProducto = new System.Windows.Forms.Button();
             this.pictureBoxProducto = new System.Windows.Forms.PictureBox();
-            this.ingresadoValorNoNumLabel = new System.Windows.Forms.Label();
             this.codigoVacioLabel = new System.Windows.Forms.Label();
             this.nombreVacioLabel = new System.Windows.Forms.Label();
             this.descripcionVacioLabel = new System.Windows.Forms.Label();
@@ -190,17 +189,6 @@
             this.pictureBoxProducto.TabIndex = 15;
             this.pictureBoxProducto.TabStop = false;
             // 
-            // ingresadoValorNoNumLabel
-            // 
-            this.ingresadoValorNoNumLabel.AutoSize = true;
-            this.ingresadoValorNoNumLabel.Location = new System.Drawing.Point(126, 214);
-            this.ingresadoValorNoNumLabel.Name = "ingresadoValorNoNumLabel";
-            this.ingresadoValorNoNumLabel.Size = new System.Drawing.Size(145, 13);
-            this.ingresadoValorNoNumLabel.TabIndex = 16;
-            this.ingresadoValorNoNumLabel.Text = " Error, sólo valores numericos";
-            this.ingresadoValorNoNumLabel.Visible = false;
-            this.ingresadoValorNoNumLabel.Click += new System.EventHandler(this.ingresadoValorNoNumLabel_Click);
-            // 
             // codigoVacioLabel
             // 
             this.codigoVacioLabel.AutoSize = true;
@@ -271,7 +259,6 @@
             this.Controls.Add(this.descripcionVacioLabel);
             this.Controls.Add(this.nombreVacioLabel);
             this.Controls.Add(this.codigoVacioLabel);
-            this.Controls.Add(this.ingresadoValorNoNumLabel);
             this.Controls.Add(this.pictureBoxProducto);
             this.Controls.Add(this.botonAgregarProducto);
             this.Controls.Add(this.precioTextBox);
@@ -319,7 +306,6 @@
         private System.Windows.Forms.TextBox precioTextBox;
         private System.Windows.Forms.Button botonAgregarProducto;
         private System.Windows.Forms.PictureBox pictureBoxProducto;
-        private System.Windows.Forms.Label ingresadoValorNoNumLabel;
         private System.Windows.Forms.Label codigoVacioLabel;
         private System.Windows.Forms.Label nombreVacioLabel;
         private System.Windows.Forms.Label descripcionVacioLabel;

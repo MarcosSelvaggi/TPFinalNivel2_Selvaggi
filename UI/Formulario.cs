@@ -23,12 +23,13 @@ namespace UI
         {
             cargarArticulos();
         }
-
+        //Métodos de carga y muestra de artículos
         private void cargarArticulos()
         {
             ArticulosManager articulosManager = new ArticulosManager();
             listaArticulos = articulosManager.listarArticulos();
             dataGridDatos.DataSource = listaArticulos;
+
             ocultarArticulos();
         }
 
@@ -42,6 +43,7 @@ namespace UI
             dataGridDatos.Columns["codigoArticulo"].Visible = false;
             dataGridDatos.Columns["descripcionArticulo"].Visible = false;
             dataGridDatos.Columns["categoriaProducto"].Visible = false;
+            dataGridDatos.Columns["precioEnDecimal"].Visible = false;
 
         }
         private void cargarImagen(string ubicacionImagen)
@@ -61,30 +63,79 @@ namespace UI
             Articulos articuloActual = (Articulos)dataGridDatos.CurrentRow.DataBoundItem;
             cargarImagen(articuloActual.imagenUrl);
         }
+        //Métodos de carga y muestra de artículos
 
+
+        //Botones
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
-            NuevoArticulo ventana = new NuevoArticulo();
-            ventana.Name = "Agregar artículo";
-            ventana.ShowDialog();
-            cargarArticulos();
+            agregarArticulo();
         }
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
-            NuevoArticulo ventana = new NuevoArticulo((Articulos)dataGridDatos.CurrentRow.DataBoundItem);
-            ventana.Name = "Modificar artículo";
-            ventana.ShowDialog();
-            cargarArticulos();
+            modificarArticulo();
         }
 
         private void btnEliminarArtículo_Click(object sender, EventArgs e)
         {
+            eliminarArticulo();
+        }
+
+        private void botonInformacionAdicional_Click(object sender, EventArgs e)
+        {
+            verInfoAdicionalArticulo();
+        }
+
+        private void agregarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            agregarArticulo();
+        }
+
+        private void modificarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modificarArticulo();
+        }
+
+        private void eliminarArtículoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            eliminarArticulo();
+        }
+
+        private void verInformaciónAdicionalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            verInfoAdicionalArticulo();
+        }
+        //Botones
+
+        //Métodos de los botones 
+        private void agregarArticulo()
+        {
+            NuevoArticulo ventana = new NuevoArticulo();
+            ventana.ShowDialog();
+            cargarArticulos();
+        }
+
+        private void modificarArticulo()
+        {
+            NuevoArticulo ventana = new NuevoArticulo((Articulos)dataGridDatos.CurrentRow.DataBoundItem);
+            ventana.ShowDialog();
+            cargarArticulos();
+        }
+
+        private void eliminarArticulo()
+        {
             EliminarArticulo aux = new EliminarArticulo((Articulos)dataGridDatos.CurrentRow.DataBoundItem);
-            aux.Name = "Eliminar artículo";
             aux.ShowDialog();
             cargarArticulos();
-
         }
+
+        private void verInfoAdicionalArticulo()
+        {
+            Articulos articuloAux = (Articulos)dataGridDatos.CurrentRow.DataBoundItem;
+            NuevoArticulo aux = new NuevoArticulo(articuloAux, true);
+            aux.ShowDialog();
+        }
+        //Métodos de los botones 
     }
 }

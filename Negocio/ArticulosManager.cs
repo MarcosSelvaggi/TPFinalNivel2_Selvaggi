@@ -40,7 +40,21 @@ namespace Negocio
                 aux.idCategoriaProducto = (int)conexion.Lector["IdCategoria"] - 1;
                 aux.categoriaProducto = listaCategorias[(int)conexion.Lector["IdCategoria"] - 1].descripcionCategoria;
                 aux.imagenUrl = (string)conexion.Lector["ImagenUrl"];
-                aux.precioArticulo = (decimal)conexion.Lector["Precio"];
+                aux.precioEnDecimal = (decimal)conexion.Lector["Precio"];
+
+                //Actualmente lo que está acá ya no es necesario porque uso el CultureInfo para transformar el valor 
+                //A pesos Argentinos, así que no hace falta 
+
+                ////Pasamos el valor decimal a string para poder trabajar con el mismo 
+                //aux.precioEnString = "$" + aux.precioEnDecimal.ToString();
+                //
+                ////Acá verificamos si el if tiene un punto decimal, en caso de lo tenga nos quedamos con 2 valores 
+                ////Después del punto
+                //if (aux.precioEnString.Contains("."))
+                //{
+                //    aux.precioEnString = aux.precioEnString.Remove(aux.precioEnString.IndexOf(".") + 3);
+                //}
+
                 listaArticulos.Add(aux);
             }
             conexion.cerrarConexion();

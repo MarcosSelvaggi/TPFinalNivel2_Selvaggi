@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using System.Globalization;
+
 
 namespace Negocio
 {
@@ -19,14 +21,20 @@ namespace Negocio
         [DisplayName("Descripción del Artículo")]
         public string descripcionArticulo { get; set; }
         [DisplayName("Marca")]
-        public int idMarcaProducto {  get; set; }
+        public int idMarcaProducto { get; set; }
         public string marcaProducto { get; set; }
         [DisplayName("Categoría")]
         public int idCategoriaProducto { get; set; }
         public string categoriaProducto { get; set; }
         public string imagenUrl { get; set; }
+        public decimal precioEnDecimal { get; set; }
         [DisplayName("Precio")]
-        public decimal precioArticulo { get; set; }
-
+        public string precioEnString
+        {
+            get
+            {
+                return precioEnDecimal.ToString("C2", CultureInfo.CreateSpecificCulture("es-AR"));
+            }
+        }
     }
 }
