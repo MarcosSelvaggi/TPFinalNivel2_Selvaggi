@@ -15,3 +15,4 @@ C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\UI\o
 C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\UI\obj\Debug\UI.Formulario.resources
 C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\UI\obj\Debug\UI.NuevoArticulo.resources
 C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\UI\obj\Debug\UI.EliminarArticulo.resources
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\UI\obj\Debug\UI.BuscarArticulo.resources

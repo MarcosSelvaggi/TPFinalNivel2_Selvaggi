@@ -53,20 +53,28 @@
             // 
             // dataGridDatos
             // 
+            this.dataGridDatos.AllowUserToAddRows = false;
+            this.dataGridDatos.AllowUserToDeleteRows = false;
+            this.dataGridDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridDatos.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dataGridDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dataGridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDatos.Location = new System.Drawing.Point(12, 44);
-            this.dataGridDatos.MinimumSize = new System.Drawing.Size(740, 250);
+            this.dataGridDatos.Location = new System.Drawing.Point(12, 56);
             this.dataGridDatos.MultiSelect = false;
             this.dataGridDatos.Name = "dataGridDatos";
             this.dataGridDatos.ReadOnly = true;
+            this.dataGridDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDatos.Size = new System.Drawing.Size(740, 250);
             this.dataGridDatos.TabIndex = 0;
             this.dataGridDatos.SelectionChanged += new System.EventHandler(this.dataGridDatos_SelectionChanged);
             // 
             // pictureBoxImagenes
             // 
-            this.pictureBoxImagenes.Location = new System.Drawing.Point(758, 44);
+            this.pictureBoxImagenes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxImagenes.Location = new System.Drawing.Point(758, 56);
             this.pictureBoxImagenes.MinimumSize = new System.Drawing.Size(230, 250);
             this.pictureBoxImagenes.Name = "pictureBoxImagenes";
             this.pictureBoxImagenes.Size = new System.Drawing.Size(230, 250);
@@ -76,7 +84,7 @@
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(12, 351);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(12, 27);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(133, 23);
             this.btnAgregarArticulo.TabIndex = 2;
@@ -86,7 +94,7 @@
             // 
             // btnModificarArticulo
             // 
-            this.btnModificarArticulo.Location = new System.Drawing.Point(151, 351);
+            this.btnModificarArticulo.Location = new System.Drawing.Point(151, 27);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
             this.btnModificarArticulo.Size = new System.Drawing.Size(133, 23);
             this.btnModificarArticulo.TabIndex = 3;
@@ -96,7 +104,7 @@
             // 
             // btnEliminarArtículo
             // 
-            this.btnEliminarArtículo.Location = new System.Drawing.Point(291, 351);
+            this.btnEliminarArtículo.Location = new System.Drawing.Point(291, 27);
             this.btnEliminarArtículo.Name = "btnEliminarArtículo";
             this.btnEliminarArtículo.Size = new System.Drawing.Size(133, 23);
             this.btnEliminarArtículo.TabIndex = 4;
@@ -106,7 +114,7 @@
             // 
             // botonInformacionAdicional
             // 
-            this.botonInformacionAdicional.Location = new System.Drawing.Point(430, 351);
+            this.botonInformacionAdicional.Location = new System.Drawing.Point(430, 27);
             this.botonInformacionAdicional.Name = "botonInformacionAdicional";
             this.botonInformacionAdicional.Size = new System.Drawing.Size(155, 23);
             this.botonInformacionAdicional.TabIndex = 5;
@@ -181,36 +189,41 @@
             this.porCódigoToolStripMenuItem.Name = "porCódigoToolStripMenuItem";
             this.porCódigoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porCódigoToolStripMenuItem.Text = "Por código";
+            this.porCódigoToolStripMenuItem.Click += new System.EventHandler(this.porCódigoToolStripMenuItem_Click);
             // 
             // porNombreToolStripMenuItem
             // 
             this.porNombreToolStripMenuItem.Name = "porNombreToolStripMenuItem";
             this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porNombreToolStripMenuItem.Text = "Por nombre";
+            this.porNombreToolStripMenuItem.Click += new System.EventHandler(this.porNombreToolStripMenuItem_Click);
             // 
             // porMarcaToolStripMenuItem
             // 
             this.porMarcaToolStripMenuItem.Name = "porMarcaToolStripMenuItem";
             this.porMarcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porMarcaToolStripMenuItem.Text = "Por marca";
+            this.porMarcaToolStripMenuItem.Click += new System.EventHandler(this.porMarcaToolStripMenuItem_Click);
             // 
             // porCategoriaToolStripMenuItem
             // 
             this.porCategoriaToolStripMenuItem.Name = "porCategoriaToolStripMenuItem";
             this.porCategoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porCategoriaToolStripMenuItem.Text = "Por categoria ";
+            this.porCategoriaToolStripMenuItem.Click += new System.EventHandler(this.porCategoriaToolStripMenuItem_Click);
             // 
             // porPrecioToolStripMenuItem
             // 
             this.porPrecioToolStripMenuItem.Name = "porPrecioToolStripMenuItem";
             this.porPrecioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.porPrecioToolStripMenuItem.Text = "Por precio";
+            this.porPrecioToolStripMenuItem.Click += new System.EventHandler(this.porPrecioToolStripMenuItem_Click);
             // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 386);
+            this.ClientSize = new System.Drawing.Size(1004, 331);
             this.Controls.Add(this.botonInformacionAdicional);
             this.Controls.Add(this.btnEliminarArtículo);
             this.Controls.Add(this.btnModificarArticulo);
@@ -219,7 +232,7 @@
             this.Controls.Add(this.dataGridDatos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(1020, 425);
+            this.MinimumSize = new System.Drawing.Size(1020, 370);
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";

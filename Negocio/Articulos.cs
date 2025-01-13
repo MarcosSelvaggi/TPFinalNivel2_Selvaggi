@@ -20,11 +20,11 @@ namespace Negocio
         public string nombreArticulo { get; set; }
         [DisplayName("Descripción del Artículo")]
         public string descripcionArticulo { get; set; }
-        [DisplayName("Marca")]
         public int idMarcaProducto { get; set; }
+        [DisplayName("Marca")]
         public string marcaProducto { get; set; }
-        [DisplayName("Categoría")]
         public int idCategoriaProducto { get; set; }
+        [DisplayName("Categoría")]
         public string categoriaProducto { get; set; }
         public string imagenUrl { get; set; }
         public decimal precioEnDecimal { get; set; }

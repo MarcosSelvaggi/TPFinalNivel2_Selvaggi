@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\tpfinalnivel2_selvaggi\\ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\tpfinalnivel2_selvaggi\\ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\tpfinalnivel2_selvaggi\\ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\tpfinalnivel2_selvaggi\\ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{938E4AD7-9EBA-434F-BA30-20B18E151691}|Negocio\\Negocio.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\tpfinalnivel2_selvaggi\\negocio\\articulosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{938E4AD7-9EBA-434F-BA30-20B18E151691}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DFC16E6-169A-4872-BB78-77DF9754A063}|Datos\\Datos.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\tpfinalnivel2_selvaggi\\datos\\accesoadatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DFC16E6-169A-4872-BB78-77DF9754A063}|Datos\\Datos.csproj|solutionrelative:datos\\accesoadatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,64 +38,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccesoADatos.cs",
-              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\Datos\\AccesoADatos.cs",
-              "RelativeDocumentMoniker": "Datos\\AccesoADatos.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\Datos\\AccesoADatos.cs",
-              "RelativeToolTip": "Datos\\AccesoADatos.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BuscarArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs",
+              "RelativeDocumentMoniker": "UI\\BuscarArticulo.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs",
+              "RelativeToolTip": "UI\\BuscarArticulo.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowIwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T16:58:07.261Z",
+              "WhenOpened": "2025-01-13T18:50:40.631Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticulosManager.cs",
-              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\Negocio\\ArticulosManager.cs",
-              "RelativeDocumentMoniker": "Negocio\\ArticulosManager.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\Negocio\\ArticulosManager.cs",
-              "RelativeToolTip": "Negocio\\ArticulosManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwDMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T13:59:06.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NuevoArticulo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs",
-              "RelativeDocumentMoniker": "UI\\NuevoArticulo.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI\\NuevoArticulo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T23:58:44.303Z",
-              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "NuevoArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs",
-              "RelativeDocumentMoniker": "UI\\NuevoArticulo.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs",
-              "RelativeToolTip": "UI\\NuevoArticulo.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAcwHgAAAANAAAAAAAAAA==",
+              "Title": "BuscarArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs",
+              "RelativeDocumentMoniker": "UI\\BuscarArticulo.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\BuscarArticulo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T01:36:53.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T18:48:53.768Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Formulario.cs",
               "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs",
               "RelativeDocumentMoniker": "UI\\Formulario.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs*",
-              "RelativeToolTip": "UI\\Formulario.cs*",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAuwC0AAAAyAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs",
+              "RelativeToolTip": "UI\\Formulario.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAiwIgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T23:16:25.459Z",
               "EditorCaption": ""
@@ -114,8 +80,8 @@
               "Title": "Formulario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs",
               "RelativeDocumentMoniker": "UI\\Formulario.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "UI\\Formulario.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI\\Formulario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T22:41:41.09Z",
               "EditorCaption": " [Dise\u00F1o]"
