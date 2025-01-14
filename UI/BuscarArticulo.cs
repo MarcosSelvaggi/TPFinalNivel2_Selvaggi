@@ -21,6 +21,7 @@ namespace UI
         public BuscarArticulo(string busqueda)
         {
             InitializeComponent();
+            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675339_ic_fluent_search_regular_icon.ico");
             this.busqueda = busqueda;
             comboBoxBusqueda.Items.Add("Contiene");
             comboBoxBusqueda.Items.Add("Empieza con");
@@ -103,7 +104,7 @@ namespace UI
             }
             else
             {
-                switch (busquedaEnInt)
+                switch (busquedaEnInt) //If que busca por marca, categoria o precio
                 {
                     case 0:
                         aux = manager.listarArticulos("select * from Articulos where IdMarca = " + (comboBoxMarcaYCategoria.SelectedIndex + 1));
@@ -137,11 +138,12 @@ namespace UI
             }
         }
 
+        //El método comprueba que no se presione otra cosa que un número, un punto o el borrar 
         private void textBoxBusqueda_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (busquedaEnInt == 2)
             {
-                //Este if no permite que el usuario ingrese otra cosa que no sea un número, un punto o el borrar
+                //Este if no permite que el usuario presiona otra cosa que no sea un número, un punto o el borrar
                 if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '\b')
                 {
                     e.Handled = true;

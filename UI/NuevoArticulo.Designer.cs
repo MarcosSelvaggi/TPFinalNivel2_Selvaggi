@@ -200,6 +200,7 @@
             this.codigoVacioLabel.TabIndex = 17;
             this.codigoVacioLabel.Text = "X";
             this.codigoVacioLabel.Visible = false;
+            this.codigoVacioLabel.MouseHover += new System.EventHandler(this.codigoVacioLabel_MouseHover);
             // 
             // nombreVacioLabel
             // 
@@ -212,6 +213,7 @@
             this.nombreVacioLabel.TabIndex = 18;
             this.nombreVacioLabel.Text = "X";
             this.nombreVacioLabel.Visible = false;
+            this.nombreVacioLabel.MouseHover += new System.EventHandler(this.nombreVacioLabel_MouseHover);
             // 
             // descripcionVacioLabel
             // 
@@ -224,6 +226,7 @@
             this.descripcionVacioLabel.TabIndex = 19;
             this.descripcionVacioLabel.Text = "X";
             this.descripcionVacioLabel.Visible = false;
+            this.descripcionVacioLabel.MouseHover += new System.EventHandler(this.descripcionVacioLabel_MouseHover);
             // 
             // urlVaciaLabel
             // 
@@ -236,6 +239,7 @@
             this.urlVaciaLabel.TabIndex = 20;
             this.urlVaciaLabel.Text = "X";
             this.urlVaciaLabel.Visible = false;
+            this.urlVaciaLabel.MouseHover += new System.EventHandler(this.urlVaciaLabel_MouseHover);
             // 
             // precioVacioLabel
             // 
@@ -248,6 +252,7 @@
             this.precioVacioLabel.TabIndex = 21;
             this.precioVacioLabel.Text = "X";
             this.precioVacioLabel.Visible = false;
+            this.precioVacioLabel.MouseHover += new System.EventHandler(this.precioVacioLabel_MouseHover);
             // 
             // NuevoArticulo
             // 

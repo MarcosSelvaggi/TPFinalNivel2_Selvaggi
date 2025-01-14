@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using Datos;
 using Negocio;
 
-
-
 namespace UI
 {
     public partial class NuevoArticulo : Form
@@ -23,6 +21,7 @@ namespace UI
         {
             InitializeComponent();
             Text = "Agregar Artículo";
+            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
         }
         //Ventana que se muestra cuando se quiere modificar un artículo
         public NuevoArticulo(Articulos articulo)
@@ -31,6 +30,7 @@ namespace UI
             botonAgregarProducto.Text = "Modificar Artículo";
             Text = "Modificar Artículo";
             aux = articulo;
+            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
         }
         //Ventana que se muestra cuando se desea ver la info completa del producto
         //Se deshabilita todo para que el usuario no pueda modificar nada
@@ -48,6 +48,7 @@ namespace UI
             comboBoxCategoria.Enabled = false;
             comboBoxMarca.Enabled = false;
             verInformacionAdicional = verArticulo;
+            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675339_ic_fluent_search_regular_icon.ico");
         }
 
         private void NuevoArticulo_Load(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace UI
             comboBoxMarca.SelectedIndex = 0;
 
             //Este if verifica que aux si es null, si se pasó un producto como parametro, este if carga los datos
-           
+
             if (aux != null)
             {
                 codigoTextBox.Text = aux.codigoArticulo;
@@ -86,13 +87,13 @@ namespace UI
                 //Si se pasó el bool para ver la información adional, este if agrega el $ al texto precio
                 if (verInformacionAdicional)
                 {
-                    
+
                     precioTextBox.Text = aux.precioEnString;
                 }
             }
 
         }
-        
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             try
@@ -125,9 +126,9 @@ namespace UI
         private void botonAgregarProducto_Click(object sender, EventArgs e)
         {
             //Si algún campo tiene longitud menor a 3, da error 
-            if (codigoTextBox.Text.Length < 3 || nombreTextBox.Text.Length < 3 || descripcionTextBox.Text.Length < 3 || urlTextBox.Text.Length < 3 || precioTextBox.Text == "")
+            if (codigoTextBox.Text.Length < 3 || nombreTextBox.Text.Length < 3 || descripcionTextBox.Text.Length < 3 || urlTextBox.Text.Length < 3 || precioTextBox.Text == "" || Decimal.Parse(precioTextBox.Text) == 0)
             {
-                MessageBox.Show("Hay campos sin completar, revise los campos marcados con rojo");
+                MessageBox.Show("Hay campos sin completar, revise las cruces rojas para ver el error");
                 if (codigoTextBox.Text.Length < 3)
                 {
                     codigoVacioLabel.Visible = true;
@@ -168,7 +169,7 @@ namespace UI
                     urlVaciaLabel.Visible = false;
                 }
 
-                if (precioTextBox.Text == "" || Int32.Parse(precioTextBox.Text) == 0)
+                if (precioTextBox.Text == "" || Decimal.Parse(precioTextBox.Text) == 0)
                 {
                     precioVacioLabel.Visible = true;
                     precioVacioLabel.ForeColor = Color.Red;
@@ -206,7 +207,6 @@ namespace UI
                     conexion.agregarParametros("@Precio", Decimal.Parse(precioTextBox.Text));
                     conexion.agregarParametros("@ImagenUrl", urlTextBox.Text);
 
-
                     conexion.ejecutarQuery();
                 }
                 catch (Exception ex)
@@ -221,6 +221,37 @@ namespace UI
             }
         }
 
+        private void precioVacioLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(precioVacioLabel, "Debe ingresar un valor númerico mayor a 0");
+        }
+
+        //Manejo del tooltip para que el usuario sepa que está mal
+        private void mostrarToolTip(Label label)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(label, "Debe ingresar por lo menos 3 caracteres");
+        }
+        private void urlVaciaLabel_MouseHover(object sender, EventArgs e)
+        {
+            mostrarToolTip(urlVaciaLabel);
+        }
+
+        private void descripcionVacioLabel_MouseHover(object sender, EventArgs e)
+        {
+            mostrarToolTip(descripcionVacioLabel);
+        }
+
+        private void nombreVacioLabel_MouseHover(object sender, EventArgs e)
+        {
+            mostrarToolTip(nombreVacioLabel);
+        }
+
+        private void codigoVacioLabel_MouseHover(object sender, EventArgs e)
+        {
+            mostrarToolTip(codigoVacioLabel);
+        }
     }
 }
 

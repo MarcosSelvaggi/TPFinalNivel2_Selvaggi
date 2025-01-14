@@ -18,7 +18,8 @@ namespace Datos
         }
         public AccesoADatos()
         {
-            conexion = new SqlConnection("server = DESKTOP-1FRKC6L\\SQLEXPRESS; database = CATALOGO_DB; integrated security = true;");
+            //Esto debería asegurarse de funcionar en casi cualquier server
+            conexion = new SqlConnection("server=localhost; database=CATALOGO_DB; integrated security=true;");
             comando = new SqlCommand();
         }      
 

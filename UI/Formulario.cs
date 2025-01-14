@@ -162,7 +162,6 @@ namespace UI
             cargarArticulos(listaArticulos);
         }
 
-
         private void porPrecioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarArticulo busqueda = new BuscarArticulo(2);
@@ -213,6 +212,18 @@ namespace UI
             verInfoAdicionalArticulo();
 
         }
+
+        private void botonRecargarArticulos_Click(object sender, EventArgs e)
+        {
+            cargarArticulos();
+        }
+
+        private void reiniciarBusquedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cargarArticulos();
+        }
+
+
         //Botones
     }
 }

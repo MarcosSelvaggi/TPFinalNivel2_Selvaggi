@@ -20,6 +20,7 @@ namespace UI
             InitializeComponent();
             labelEliminado.Text = "¿Desea eliminar el artículo " + Articulo.nombreArticulo + "?";
             aux = Articulo;
+            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8674741_ic_fluent_delete_regular_icon.ico");
         }
 
         private void botonConfirmar_Click(object sender, EventArgs e)
@@ -47,5 +48,6 @@ namespace UI
         {
             Close();
         }
+
     }
 }
