@@ -1,0 +1,6 @@
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Datos\bin\Release\Datos.dll
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Datos\bin\Release\Datos.pdb
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Datos\obj\Release\Datos.csproj.AssemblyReference.cache
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Datos\obj\Release\Datos.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Datos\obj\Release\Datos.dll
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Datos\obj\Release\Datos.pdb

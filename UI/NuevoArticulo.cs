@@ -19,6 +19,8 @@ namespace UI
         bool verInformacionAdicional;
         public NuevoArticulo()
         {
+            string aa = "342";
+            int x = Int32.Parse(aa);
             InitializeComponent();
             Text = "Agregar Artículo";
             Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
@@ -224,6 +226,7 @@ namespace UI
         private void precioVacioLabel_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
+            toolTip.AutomaticDelay = 100;
             toolTip.SetToolTip(precioVacioLabel, "Debe ingresar un valor númerico mayor a 0");
         }
 

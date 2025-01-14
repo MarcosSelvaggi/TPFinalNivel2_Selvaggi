@@ -110,12 +110,9 @@ namespace UI
             aux.ShowDialog();
         }
 
-        //Métodos de los botones 
-
-        //Botones
-        private void porCódigoToolStripMenuItem_Click(object sender, EventArgs e)
+        //Comprueba el DialogResult de los botones de busqueda
+        private void respuestaOk(BuscarArticulo busqueda)
         {
-            BuscarArticulo busqueda = new BuscarArticulo("Codigo");
             DialogResult respuesta = busqueda.ShowDialog();
             if (respuesta == DialogResult.OK)
             {
@@ -124,15 +121,19 @@ namespace UI
             cargarArticulos(listaArticulos);
         }
 
+        //Métodos de los botones 
+
+        //Botones
+        private void porCódigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarArticulo busqueda = new BuscarArticulo("Codigo");
+            respuestaOk(busqueda);
+        }
+
         private void porNombreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarArticulo busqueda = new BuscarArticulo("Nombre");
-            DialogResult respuesta = busqueda.ShowDialog();
-            if (respuesta == DialogResult.OK)
-            {
-                listaArticulos = busqueda.aux;
-            }
-            cargarArticulos(listaArticulos);
+            respuestaOk(busqueda);
         }
 
         /// El entero I representa donde entra:
@@ -143,35 +144,23 @@ namespace UI
         private void porMarcaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarArticulo busqueda = new BuscarArticulo(0);
-            DialogResult respuesta = busqueda.ShowDialog();
-            if (respuesta == DialogResult.OK)
-            {
-                listaArticulos = busqueda.aux;
-            }
-            cargarArticulos(listaArticulos);
+            respuestaOk(busqueda);
         }
 
         private void porCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarArticulo busqueda = new BuscarArticulo(1);
-            DialogResult respuesta = busqueda.ShowDialog();
-            if (respuesta == DialogResult.OK)
-            {
-                listaArticulos = busqueda.aux;
-            }
-            cargarArticulos(listaArticulos);
+            respuestaOk(busqueda);
         }
 
         private void porPrecioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BuscarArticulo busqueda = new BuscarArticulo(2);
-            DialogResult respuesta = busqueda.ShowDialog();
-            if (respuesta == DialogResult.OK)
-            {
-                listaArticulos = busqueda.aux;
-            }
-            cargarArticulos(listaArticulos);
+            respuestaOk(busqueda); 
         }
+
+        
+
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             agregarArticulo();

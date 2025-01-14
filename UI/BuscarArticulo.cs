@@ -47,10 +47,12 @@ namespace UI
                     {
                         comboBoxMarcaYCategoria.Items.Add(item.descripcionMarca);
                     }
+
                     comboBoxBusqueda.Visible = false;
                     comboBoxMarcaYCategoria.Visible = true;
                     textBoxBusqueda.Visible = false;
                     comboBoxMarcaYCategoria.SelectedIndex = 0;
+
                     break;
                 case 1:
                     CategoriasManager managerCategorias = new CategoriasManager();
@@ -60,23 +62,25 @@ namespace UI
                     {
                         comboBoxMarcaYCategoria.Items.Add(item.descripcionCategoria);
                     }
+
                     comboBoxBusqueda.Visible = false;
                     comboBoxMarcaYCategoria.Visible = true;
                     textBoxBusqueda.Visible = false;
                     comboBoxMarcaYCategoria.SelectedIndex = 0;
+
                     break;
                 case 2:
                     comboBoxBusqueda.Items.Add("Igual que");
                     comboBoxBusqueda.Items.Add("Menor que");
                     comboBoxBusqueda.Items.Add("Mayor que");
                     comboBoxBusqueda.SelectedIndex = 0;
+                    botonBusqueda.Enabled = false;
+
                     break;
                 default:
                     MessageBox.Show("Algo salió mal");
                     break;
             }
-
-
         }
 
         private void botonBusqueda_Click(object sender, EventArgs e)
@@ -97,10 +101,9 @@ namespace UI
                         aux = manager.listarArticulos("select * from Articulos where " + busqueda + " like '%" + textBoxBusqueda.Text + "' ");
                         break;
                     default:
-                        MessageBox.Show("No sé como lo hiciste pero rompiste el switch");
+                        MessageBox.Show("Error, se rompió el switch");
                         break;
                 }
-
             }
             else
             {
@@ -154,6 +157,30 @@ namespace UI
                 {
                     e.Handled = true;
                 }
+            }
+        }
+
+        //Activa el botón de la busqueda si el usuario ingreso un número, si no hay un número para buscar lo desactiva
+        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (busquedaEnInt == 2 && textBoxBusqueda.Text.Length != 0)
+            {
+                botonBusqueda.Enabled = Enabled;
+            }
+            else
+            {
+                botonBusqueda.Enabled = false;
+            }
+        }
+
+        //Tooltip que avisa de ingresar un número en caso de que no lo haya hecho todavía
+        private void textBoxBusqueda_MouseHover(object sender, EventArgs e)
+        {
+            if (busquedaEnInt == 2 && textBoxBusqueda.Text.Length == 0)
+            {
+                ToolTip precio = new ToolTip();
+                precio.AutomaticDelay = 100;
+                precio.SetToolTip(textBoxBusqueda, "Debe ingresar al menos un número");
             }
         }
     }

@@ -1,0 +1,9 @@
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\bin\Release\Negocio.dll
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\bin\Release\Negocio.pdb
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\bin\Release\Datos.dll
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\bin\Release\Datos.pdb
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\obj\Release\Negocio.csproj.AssemblyReference.cache
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\obj\Release\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\obj\Release\Negocio.csproj.Up2Date
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\obj\Release\Negocio.dll
+C:\Users\marco\Documents\Visual Studio 2022\Projects\TPFinalNivel2_Selvaggi\Negocio\obj\Release\Negocio.pdb
