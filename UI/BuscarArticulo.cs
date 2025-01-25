@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Datos;
 using Negocio;
 
 namespace UI
@@ -21,7 +14,15 @@ namespace UI
         public BuscarArticulo(string busqueda)
         {
             InitializeComponent();
-            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675339_ic_fluent_search_regular_icon.ico");
+            try
+            {
+                Icon = new System.Drawing.Icon(@"..\..\..\Imagenes\Iconos\8675339_ic_fluent_search_regular_icon.ico");
+            }
+            catch (Exception)
+            {
+                Icon = new Form().Icon;
+            }
+
             this.busqueda = busqueda;
             comboBoxBusqueda.Items.Add("Contiene");
             comboBoxBusqueda.Items.Add("Empieza con");
@@ -36,6 +37,14 @@ namespace UI
         public BuscarArticulo(int i)
         {
             InitializeComponent();
+            try
+            {
+                Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675339_ic_fluent_search_regular_icon.ico");
+            }
+            catch (Exception)
+            {
+                Icon = new Form().Icon;
+            }
             busquedaEnInt = i;
             switch (i)
             {

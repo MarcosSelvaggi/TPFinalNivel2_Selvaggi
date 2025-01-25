@@ -49,6 +49,7 @@
             this.descripcionVacioLabel = new System.Windows.Forms.Label();
             this.urlVaciaLabel = new System.Windows.Forms.Label();
             this.precioVacioLabel = new System.Windows.Forms.Label();
+            this.botonCargarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,7 +122,7 @@
             this.comboBoxMarca.FormattingEnabled = true;
             this.comboBoxMarca.Location = new System.Drawing.Point(119, 121);
             this.comboBoxMarca.Name = "comboBoxMarca";
-            this.comboBoxMarca.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxMarca.Size = new System.Drawing.Size(192, 21);
             this.comboBoxMarca.TabIndex = 7;
             // 
             // comboBoxCategoria
@@ -130,51 +131,52 @@
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Location = new System.Drawing.Point(119, 149);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxCategoria.Size = new System.Drawing.Size(192, 21);
             this.comboBoxCategoria.TabIndex = 8;
             // 
             // codigoTextBox
             // 
             this.codigoTextBox.Location = new System.Drawing.Point(119, 31);
             this.codigoTextBox.Name = "codigoTextBox";
-            this.codigoTextBox.Size = new System.Drawing.Size(165, 20);
+            this.codigoTextBox.Size = new System.Drawing.Size(192, 20);
             this.codigoTextBox.TabIndex = 9;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.Location = new System.Drawing.Point(119, 59);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(165, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(192, 20);
             this.nombreTextBox.TabIndex = 10;
             // 
             // descripcionTextBox
             // 
             this.descripcionTextBox.Location = new System.Drawing.Point(119, 89);
             this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(165, 20);
+            this.descripcionTextBox.Size = new System.Drawing.Size(192, 20);
             this.descripcionTextBox.TabIndex = 11;
             // 
             // urlTextBox
             // 
             this.urlTextBox.Location = new System.Drawing.Point(119, 185);
             this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(165, 20);
+            this.urlTextBox.Size = new System.Drawing.Size(192, 20);
             this.urlTextBox.TabIndex = 12;
-            this.urlTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.urlTextBox.Click += new System.EventHandler(this.urlTextBox_Click);
+            this.urlTextBox.TextChanged += new System.EventHandler(this.urlTextBox_TextChanged);
             // 
             // precioTextBox
             // 
             this.precioTextBox.Location = new System.Drawing.Point(119, 211);
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(165, 20);
+            this.precioTextBox.Size = new System.Drawing.Size(192, 20);
             this.precioTextBox.TabIndex = 13;
             this.precioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precioTextBox_KeyPress);
             // 
             // botonAgregarProducto
             // 
-            this.botonAgregarProducto.Location = new System.Drawing.Point(209, 255);
+            this.botonAgregarProducto.Location = new System.Drawing.Point(269, 256);
             this.botonAgregarProducto.Name = "botonAgregarProducto";
-            this.botonAgregarProducto.Size = new System.Drawing.Size(158, 23);
+            this.botonAgregarProducto.Size = new System.Drawing.Size(160, 25);
             this.botonAgregarProducto.TabIndex = 14;
             this.botonAgregarProducto.Text = "Agregar Artículo";
             this.botonAgregarProducto.UseVisualStyleBackColor = true;
@@ -182,7 +184,7 @@
             // 
             // pictureBoxProducto
             // 
-            this.pictureBoxProducto.Location = new System.Drawing.Point(334, 31);
+            this.pictureBoxProducto.Location = new System.Drawing.Point(433, 31);
             this.pictureBoxProducto.Name = "pictureBoxProducto";
             this.pictureBoxProducto.Size = new System.Drawing.Size(233, 200);
             this.pictureBoxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,8 +195,8 @@
             // 
             this.codigoVacioLabel.AutoSize = true;
             this.codigoVacioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigoVacioLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.codigoVacioLabel.Location = new System.Drawing.Point(290, 34);
+            this.codigoVacioLabel.ForeColor = System.Drawing.Color.Red;
+            this.codigoVacioLabel.Location = new System.Drawing.Point(317, 32);
             this.codigoVacioLabel.Name = "codigoVacioLabel";
             this.codigoVacioLabel.Size = new System.Drawing.Size(16, 16);
             this.codigoVacioLabel.TabIndex = 17;
@@ -206,8 +208,8 @@
             // 
             this.nombreVacioLabel.AutoSize = true;
             this.nombreVacioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreVacioLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.nombreVacioLabel.Location = new System.Drawing.Point(290, 59);
+            this.nombreVacioLabel.ForeColor = System.Drawing.Color.Red;
+            this.nombreVacioLabel.Location = new System.Drawing.Point(317, 64);
             this.nombreVacioLabel.Name = "nombreVacioLabel";
             this.nombreVacioLabel.Size = new System.Drawing.Size(16, 16);
             this.nombreVacioLabel.TabIndex = 18;
@@ -219,8 +221,8 @@
             // 
             this.descripcionVacioLabel.AutoSize = true;
             this.descripcionVacioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcionVacioLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.descripcionVacioLabel.Location = new System.Drawing.Point(290, 92);
+            this.descripcionVacioLabel.ForeColor = System.Drawing.Color.Red;
+            this.descripcionVacioLabel.Location = new System.Drawing.Point(317, 90);
             this.descripcionVacioLabel.Name = "descripcionVacioLabel";
             this.descripcionVacioLabel.Size = new System.Drawing.Size(16, 16);
             this.descripcionVacioLabel.TabIndex = 19;
@@ -232,8 +234,8 @@
             // 
             this.urlVaciaLabel.AutoSize = true;
             this.urlVaciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlVaciaLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.urlVaciaLabel.Location = new System.Drawing.Point(290, 186);
+            this.urlVaciaLabel.ForeColor = System.Drawing.Color.Red;
+            this.urlVaciaLabel.Location = new System.Drawing.Point(317, 185);
             this.urlVaciaLabel.Name = "urlVaciaLabel";
             this.urlVaciaLabel.Size = new System.Drawing.Size(16, 16);
             this.urlVaciaLabel.TabIndex = 20;
@@ -245,8 +247,8 @@
             // 
             this.precioVacioLabel.AutoSize = true;
             this.precioVacioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precioVacioLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.precioVacioLabel.Location = new System.Drawing.Point(290, 212);
+            this.precioVacioLabel.ForeColor = System.Drawing.Color.Red;
+            this.precioVacioLabel.Location = new System.Drawing.Point(317, 211);
             this.precioVacioLabel.Name = "precioVacioLabel";
             this.precioVacioLabel.Size = new System.Drawing.Size(16, 16);
             this.precioVacioLabel.TabIndex = 21;
@@ -254,11 +256,22 @@
             this.precioVacioLabel.Visible = false;
             this.precioVacioLabel.MouseHover += new System.EventHandler(this.precioVacioLabel_MouseHover);
             // 
+            // botonCargarImagen
+            // 
+            this.botonCargarImagen.Location = new System.Drawing.Point(339, 183);
+            this.botonCargarImagen.Name = "botonCargarImagen";
+            this.botonCargarImagen.Size = new System.Drawing.Size(88, 23);
+            this.botonCargarImagen.TabIndex = 22;
+            this.botonCargarImagen.Text = "Cargar imagen";
+            this.botonCargarImagen.UseVisualStyleBackColor = true;
+            this.botonCargarImagen.Click += new System.EventHandler(this.botonCargarImagen_Click);
+            // 
             // NuevoArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 291);
+            this.ClientSize = new System.Drawing.Size(694, 291);
+            this.Controls.Add(this.botonCargarImagen);
             this.Controls.Add(this.precioVacioLabel);
             this.Controls.Add(this.urlVaciaLabel);
             this.Controls.Add(this.descripcionVacioLabel);
@@ -280,7 +293,7 @@
             this.Controls.Add(this.labelDescripcion);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.labelCodigo);
-            this.MaximumSize = new System.Drawing.Size(620, 330);
+            this.MaximumSize = new System.Drawing.Size(710, 330);
             this.MinimumSize = new System.Drawing.Size(620, 330);
             this.Name = "NuevoArticulo";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -316,5 +329,6 @@
         private System.Windows.Forms.Label descripcionVacioLabel;
         private System.Windows.Forms.Label urlVaciaLabel;
         private System.Windows.Forms.Label precioVacioLabel;
+        private System.Windows.Forms.Button botonCargarImagen;
     }
 }

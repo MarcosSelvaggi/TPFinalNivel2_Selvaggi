@@ -107,7 +107,7 @@
             // 
             // btnEliminarArtículo
             // 
-            this.btnEliminarArtículo.Location = new System.Drawing.Point(422, 27);
+            this.btnEliminarArtículo.Location = new System.Drawing.Point(582, 27);
             this.btnEliminarArtículo.Name = "btnEliminarArtículo";
             this.btnEliminarArtículo.Size = new System.Drawing.Size(133, 23);
             this.btnEliminarArtículo.TabIndex = 4;
@@ -117,7 +117,7 @@
             // 
             // botonInformacionAdicional
             // 
-            this.botonInformacionAdicional.Location = new System.Drawing.Point(561, 27);
+            this.botonInformacionAdicional.Location = new System.Drawing.Point(421, 27);
             this.botonInformacionAdicional.Name = "botonInformacionAdicional";
             this.botonInformacionAdicional.Size = new System.Drawing.Size(155, 23);
             this.botonInformacionAdicional.TabIndex = 5;
@@ -191,42 +191,42 @@
             // porCódigoToolStripMenuItem
             // 
             this.porCódigoToolStripMenuItem.Name = "porCódigoToolStripMenuItem";
-            this.porCódigoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.porCódigoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.porCódigoToolStripMenuItem.Text = "Por código";
             this.porCódigoToolStripMenuItem.Click += new System.EventHandler(this.porCódigoToolStripMenuItem_Click);
             // 
             // porNombreToolStripMenuItem
             // 
             this.porNombreToolStripMenuItem.Name = "porNombreToolStripMenuItem";
-            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.porNombreToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.porNombreToolStripMenuItem.Text = "Por nombre";
             this.porNombreToolStripMenuItem.Click += new System.EventHandler(this.porNombreToolStripMenuItem_Click);
             // 
             // porMarcaToolStripMenuItem
             // 
             this.porMarcaToolStripMenuItem.Name = "porMarcaToolStripMenuItem";
-            this.porMarcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.porMarcaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.porMarcaToolStripMenuItem.Text = "Por marca";
             this.porMarcaToolStripMenuItem.Click += new System.EventHandler(this.porMarcaToolStripMenuItem_Click);
             // 
             // porCategoriaToolStripMenuItem
             // 
             this.porCategoriaToolStripMenuItem.Name = "porCategoriaToolStripMenuItem";
-            this.porCategoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.porCategoriaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.porCategoriaToolStripMenuItem.Text = "Por categoria ";
             this.porCategoriaToolStripMenuItem.Click += new System.EventHandler(this.porCategoriaToolStripMenuItem_Click);
             // 
             // porPrecioToolStripMenuItem
             // 
             this.porPrecioToolStripMenuItem.Name = "porPrecioToolStripMenuItem";
-            this.porPrecioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.porPrecioToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.porPrecioToolStripMenuItem.Text = "Por precio";
             this.porPrecioToolStripMenuItem.Click += new System.EventHandler(this.porPrecioToolStripMenuItem_Click);
             // 
             // reiniciarBusquedaToolStripMenuItem
             // 
             this.reiniciarBusquedaToolStripMenuItem.Name = "reiniciarBusquedaToolStripMenuItem";
-            this.reiniciarBusquedaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reiniciarBusquedaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.reiniciarBusquedaToolStripMenuItem.Text = "Reiniciar busqueda";
             this.reiniciarBusquedaToolStripMenuItem.Click += new System.EventHandler(this.reiniciarBusquedaToolStripMenuItem_Click);
             // 

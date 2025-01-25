@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Configuration;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
 using Negocio;
@@ -14,16 +12,23 @@ namespace UI
 {
     public partial class NuevoArticulo : Form
     {
-
+        private OpenFileDialog archivo;
         Articulos aux;
         bool verInformacionAdicional;
         public NuevoArticulo()
         {
-            string aa = "342";
-            int x = Int32.Parse(aa);
             InitializeComponent();
             Text = "Agregar Artículo";
-            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
+            urlTextBox.Text = "Ingrese la URL o cargue una imagen";
+            //Bloque try-catch para la carga del ícono, si algo sale mal, se carga el icono por defecto 
+            try
+            {
+                Icon = new System.Drawing.Icon(@"..\..\..\Imagenes\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
+            }
+            catch (Exception)
+            {
+                Icon = new Form().Icon;
+            }
         }
         //Ventana que se muestra cuando se quiere modificar un artículo
         public NuevoArticulo(Articulos articulo)
@@ -32,7 +37,14 @@ namespace UI
             botonAgregarProducto.Text = "Modificar Artículo";
             Text = "Modificar Artículo";
             aux = articulo;
-            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
+            try
+            {
+                Icon = new System.Drawing.Icon(@"..\..\..\Imagenes\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
+            }
+            catch (Exception)
+            {
+                Icon = new Form().Icon;
+            }
         }
         //Ventana que se muestra cuando se desea ver la info completa del producto
         //Se deshabilita todo para que el usuario no pueda modificar nada
@@ -50,7 +62,15 @@ namespace UI
             comboBoxCategoria.Enabled = false;
             comboBoxMarca.Enabled = false;
             verInformacionAdicional = verArticulo;
-            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8675339_ic_fluent_search_regular_icon.ico");
+            botonCargarImagen.Enabled = false;
+            try
+            {
+                Icon = new System.Drawing.Icon(@"..\..\..\Imagenes\Iconos\8675339_ic_fluent_search_regular_icon.ico");
+            }
+            catch (Exception)
+            {
+                Icon = new Form().Icon;
+            }
         }
 
         private void NuevoArticulo_Load(object sender, EventArgs e)
@@ -74,8 +94,7 @@ namespace UI
             comboBoxCategoria.SelectedIndex = 0;
             comboBoxMarca.SelectedIndex = 0;
 
-            //Este if verifica que aux si es null, si se pasó un producto como parametro, este if carga los datos
-
+            //Cargar los datos del articulo que se pasó por parametro
             if (aux != null)
             {
                 codigoTextBox.Text = aux.codigoArticulo;
@@ -86,17 +105,16 @@ namespace UI
                 comboBoxCategoria.SelectedIndex = aux.idCategoriaProducto;
                 comboBoxMarca.SelectedIndex = aux.idMarcaProducto;
 
-                //Si se pasó el bool para ver la información adional, este if agrega el $ al texto precio
+                //Agrega el $ al texto precio
                 if (verInformacionAdicional)
                 {
-
                     precioTextBox.Text = aux.precioEnString;
                 }
             }
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void urlTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -127,34 +145,31 @@ namespace UI
 
         private void botonAgregarProducto_Click(object sender, EventArgs e)
         {
-            //Si algún campo tiene longitud menor a 3, da error 
-            if (codigoTextBox.Text.Length < 3 || nombreTextBox.Text.Length < 3 || descripcionTextBox.Text.Length < 3 || urlTextBox.Text.Length < 3 || precioTextBox.Text == "" || Decimal.Parse(precioTextBox.Text) == 0)
+            //If muy largo que revisa las longitudes de los Text Box, y del precio
+            if ((codigoTextBox.Text.Length < 3 || codigoTextBox.Text.Length > 50) || (nombreTextBox.Text.Length < 3 || nombreTextBox.Text.Length > 50) || (descripcionTextBox.Text.Length < 3 || descripcionTextBox.Text.Length > 150) || urlTextBox.Text.Length < 3 || precioTextBox.Text == "" || Decimal.Parse(precioTextBox.Text) == 0)
             {
                 MessageBox.Show("Hay campos sin completar, revise las cruces rojas para ver el error");
-                if (codigoTextBox.Text.Length < 3)
+                if (codigoTextBox.Text.Length < 3 || codigoTextBox.Text.Length > 50)
                 {
                     codigoVacioLabel.Visible = true;
-                    codigoVacioLabel.ForeColor = Color.Red;
                 }
                 else
                 {
                     codigoVacioLabel.Visible = false;
                 }
 
-                if (nombreTextBox.Text.Length < 3)
+                if (nombreTextBox.Text.Length < 3 || nombreTextBox.Text.Length > 50)
                 {
                     nombreVacioLabel.Visible = true;
-                    nombreVacioLabel.ForeColor = Color.Red;
                 }
                 else
                 {
                     nombreVacioLabel.Visible = false;
                 }
 
-                if (descripcionTextBox.Text.Length < 3)
+                if (descripcionTextBox.Text.Length < 3 || descripcionTextBox.Text.Length > 150)
                 {
                     descripcionVacioLabel.Visible = true;
-                    descripcionVacioLabel.ForeColor = Color.Red;
                 }
                 else
                 {
@@ -164,7 +179,6 @@ namespace UI
                 if (urlTextBox.Text.Length < 3)
                 {
                     urlVaciaLabel.Visible = true;
-                    urlVaciaLabel.ForeColor = Color.Red;
                 }
                 else
                 {
@@ -174,7 +188,6 @@ namespace UI
                 if (precioTextBox.Text == "" || Decimal.Parse(precioTextBox.Text) == 0)
                 {
                     precioVacioLabel.Visible = true;
-                    precioVacioLabel.ForeColor = Color.Red;
                 }
                 else
                 {
@@ -207,13 +220,45 @@ namespace UI
                     conexion.agregarParametros("@IdMarca", (comboBoxMarca.SelectedIndex + 1));
                     conexion.agregarParametros("@IdCategoria", (comboBoxCategoria.SelectedIndex + 1));
                     conexion.agregarParametros("@Precio", Decimal.Parse(precioTextBox.Text));
-                    conexion.agregarParametros("@ImagenUrl", urlTextBox.Text);
+                    if (archivo != null && !(urlTextBox.Text.Contains("https")))
 
+                        //Verifica que exista la carpeta donde van las imagenes de los productos, si no existe la crea 
+                        if (!Directory.Exists(ConfigurationManager.AppSettings["images-folder"]))
+                        {
+                            DirectoryInfo directorio = new DirectoryInfo(ConfigurationManager.AppSettings["images-folder"]);
+                            directorio.Create();
+                        }
+
+                    //Cualquiera de las 2 funcionan, la dejo para que se vea y se pueda probar 
+                    //string ubicacionImagen = @"..\..\..\Imagenes\Articulos\" + codigoTextBox.Text + " - " + nombreTextBox.Text + "-" + DateTime.Now.Year + DateTime.Now.Month+ DateTime.Now.Day;
+                    string ubicacionImagen = ConfigurationManager.AppSettings["images-folder"] + codigoTextBox.Text + " - " + nombreTextBox.Text + "-" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day;
+
+                    //Este dispose evita el IOException generado por tener la imagen cargada
+                    pictureBoxProducto.Dispose();
+
+                    //Si ya existe un archivo con el nombre del producto, la remplaza
+                    if (File.Exists(aux.imagenUrl))
+                        File.Delete(aux.imagenUrl);
+
+                    File.Copy(archivo.FileName, ubicacionImagen);
+                    urlTextBox.Text = ubicacionImagen;
+
+                    conexion.agregarParametros("@ImagenUrl", urlTextBox.Text);
                     conexion.ejecutarQuery();
                 }
-                catch (Exception ex)
+                catch (IOException)
                 {
-                    throw ex;
+                    MessageBox.Show("Error al copiar el archivo");
+                    throw;
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    MessageBox.Show("No hay permisos para copiar el archivo");
+                    throw;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ocurrió un error en la carga o modificación del artículo");
                 }
                 finally
                 {
@@ -234,7 +279,7 @@ namespace UI
         private void mostrarToolTip(Label label)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(label, "Debe ingresar por lo menos 3 caracteres");
+            toolTip.SetToolTip(label, "Debe ingresar entre 3 y 50 carácteres");
         }
         private void urlVaciaLabel_MouseHover(object sender, EventArgs e)
         {
@@ -243,7 +288,9 @@ namespace UI
 
         private void descripcionVacioLabel_MouseHover(object sender, EventArgs e)
         {
-            mostrarToolTip(descripcionVacioLabel);
+            ToolTip toolTip = new ToolTip();
+            toolTip.AutomaticDelay = 100;
+            toolTip.SetToolTip(precioVacioLabel, "Debe ingresar entre 3 y 150 carácteres");
         }
 
         private void nombreVacioLabel_MouseHover(object sender, EventArgs e)
@@ -255,6 +302,34 @@ namespace UI
         {
             mostrarToolTip(codigoVacioLabel);
         }
+
+        private void botonCargarImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "Imágenes(*.jpg, *.png, *.gif) | *.jpg; *.png; *.gif";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                urlTextBox.Text = archivo.SafeFileName;
+                try
+                {
+                    pictureBoxProducto.Load(archivo.FileName);
+                }
+                catch (Exception)
+                {
+                    pictureBoxProducto.Load("https://static.thenounproject.com/png/2932881-200.png");
+                }
+            }
+        }
+
+        private void urlTextBox_Click(object sender, EventArgs e)
+        {
+            //If que limpia el textbox de la ruta de la imagen la primera vez que se hace click
+            if (aux == null && urlTextBox.Text == "Ingrese la URL o cargue una imagen")
+            {
+                urlTextBox.Text = "";
+            }
+        }
+
     }
 }
 

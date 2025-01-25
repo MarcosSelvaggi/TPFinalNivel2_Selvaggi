@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Negocio;
 using Datos;
+using Negocio;
 
 namespace UI
 {
@@ -20,7 +13,14 @@ namespace UI
             InitializeComponent();
             labelEliminado.Text = "¿Desea eliminar el artículo " + Articulo.nombreArticulo + "?";
             aux = Articulo;
-            Icon = new System.Drawing.Icon(@"..\..\..\Iconos\8674741_ic_fluent_delete_regular_icon.ico");
+            try
+            {
+                Icon = new System.Drawing.Icon(@"..\..\..\Imagenes\Iconos\8674741_ic_fluent_delete_regular_icon.ico");
+            }
+            catch (Exception)
+            {
+                Icon = new Form().Icon;
+            }
         }
 
         private void botonConfirmar_Click(object sender, EventArgs e)
