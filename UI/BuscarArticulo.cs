@@ -96,57 +96,18 @@ namespace UI
         {
             //If que busca por nombre o por código
             ArticulosManager manager = new ArticulosManager();
+
             if (busqueda != null)
             {
-                switch (comboBoxBusqueda.SelectedIndex)
-                {
-                    case 0:
-                        aux = manager.listarArticulos("select * from Articulos where " + busqueda + " like '%" + textBoxBusqueda.Text + "%' ");
-                        break;
-                    case 1:
-                        aux = manager.listarArticulos("select * from Articulos where " + busqueda + " like '" + textBoxBusqueda.Text + "%' ");
-                        break;
-                    case 2:
-                        aux = manager.listarArticulos("select * from Articulos where " + busqueda + " like '%" + textBoxBusqueda.Text + "' ");
-                        break;
-                    default:
-                        MessageBox.Show("Error, se rompió el switch");
-                        break;
-                }
+                aux = manager.buscarPorNombre_O_Codigo(busqueda, textBoxBusqueda.Text, comboBoxBusqueda.SelectedIndex);
+            }
+            else if (busqueda == null && busquedaEnInt != 2)
+            {
+                aux = manager.buscarPorMarca_O_Categoria((comboBoxMarcaYCategoria.SelectedIndex + 1).ToString(), busquedaEnInt);
             }
             else
             {
-                switch (busquedaEnInt) //If que busca por marca, categoria o precio
-                {
-                    case 0:
-                        aux = manager.listarArticulos("select * from Articulos where IdMarca = " + (comboBoxMarcaYCategoria.SelectedIndex + 1));
-                        break;
-                    case 1:
-                        aux = manager.listarArticulos("select * from Articulos where IdCategoria = " + (comboBoxMarcaYCategoria.SelectedIndex + 1));
-                        break;
-                    case 2:
-                        buscarPrecio(manager);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-
-        private void buscarPrecio(ArticulosManager manager)
-        {
-            switch (comboBoxBusqueda.SelectedIndex)
-            {
-                case 0:
-                    aux = manager.listarArticulos("Select * From Articulos where Precio = " + textBoxBusqueda.Text);
-                    break;
-                case 1:
-                    aux = manager.listarArticulos("Select * From Articulos where Precio < " + textBoxBusqueda.Text);
-                    break;
-                case 2:
-                    aux = manager.listarArticulos("Select * From Articulos where Precio > " + textBoxBusqueda.Text);
-                    break;
-
+                aux = manager.buscarPorPrecio(comboBoxBusqueda.SelectedIndex, textBoxBusqueda.Text);
             }
         }
 
@@ -172,7 +133,8 @@ namespace UI
         //Activa el botón de la busqueda si el usuario ingreso un número, si no hay un número para buscar lo desactiva
         private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
         {
-            if (busquedaEnInt == 2 && textBoxBusqueda.Text.Length != 0)
+
+            if ((busquedaEnInt == 2 && textBoxBusqueda.Text.Length != 0) || busquedaEnInt != 2)
             {
                 botonBusqueda.Enabled = Enabled;
             }

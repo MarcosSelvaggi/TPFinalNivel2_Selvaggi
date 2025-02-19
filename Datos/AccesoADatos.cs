@@ -36,6 +36,27 @@ namespace Datos
                 throw ex;
             }
         }
+
+        public int ejecutarNonQuery()
+        {
+            int rowsAffectadas = 0;
+            try
+            {
+                comando.Connection = conexion;
+                conexion.Open();
+                rowsAffectadas = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return rowsAffectadas;
+        }
+
         public void setearConsulta(string query)
         {
             comando.CommandType = System.Data.CommandType.Text;
@@ -46,7 +67,6 @@ namespace Datos
         {
             comando.Parameters.AddWithValue(key, value);
         }
-
 
         public void cerrarConexion()
         {

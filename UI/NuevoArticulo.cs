@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using Datos;
 using Negocio;
@@ -15,6 +16,7 @@ namespace UI
         private OpenFileDialog archivo;
         Articulos aux;
         bool verInformacionAdicional;
+        string pathFileAux = "";
         public NuevoArticulo()
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace UI
             botonAgregarProducto.Text = "Modificar Artículo";
             Text = "Modificar Artículo";
             aux = articulo;
+            pathFileAux = aux.imagenUrl;
             try
             {
                 Icon = new System.Drawing.Icon(@"..\..\..\Imagenes\Iconos\8675578_ic_fluent_text_bullet_list_icon.ico");
@@ -196,32 +199,10 @@ namespace UI
             }
             else
             {
-                AccesoADatos conexion = new AccesoADatos();
-                string query = "";
-
-                //Si el articulo auxiliar está en null, significa que va a agregar un producto
-                //Caso contrario, está modificando el mismo
-                if (aux == null)
-                {
-                    query = "INSERT INTO Articulos (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @ImagenUrl, @Precio)";
-                    conexion.setearConsulta(query);
-                }
-                else
-                {
-                    query = "UPDATE Articulos set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio where Id = @Id";
-                    conexion.setearConsulta(query);
-                    conexion.agregarParametros("@Id", aux.idArticulo);
-                }
                 try
                 {
-                    conexion.agregarParametros("@Codigo", codigoTextBox.Text);
-                    conexion.agregarParametros("@Nombre", nombreTextBox.Text);
-                    conexion.agregarParametros("@Descripcion", descripcionTextBox.Text);
-                    conexion.agregarParametros("@IdMarca", (comboBoxMarca.SelectedIndex + 1));
-                    conexion.agregarParametros("@IdCategoria", (comboBoxCategoria.SelectedIndex + 1));
-                    conexion.agregarParametros("@Precio", Decimal.Parse(precioTextBox.Text));
                     if (archivo != null && !(urlTextBox.Text.Contains("https")))
-
+                    {
                         //Verifica que exista la carpeta donde van las imagenes de los productos, si no existe la crea 
                         if (!Directory.Exists(ConfigurationManager.AppSettings["images-folder"]))
                         {
@@ -229,41 +210,60 @@ namespace UI
                             directorio.Create();
                         }
 
-                    //Cualquiera de las 2 funcionan, la dejo para que se vea y se pueda probar 
-                    //string ubicacionImagen = @"..\..\..\Imagenes\Articulos\" + codigoTextBox.Text + " - " + nombreTextBox.Text + "-" + DateTime.Now.Year + DateTime.Now.Month+ DateTime.Now.Day;
-                    string ubicacionImagen = ConfigurationManager.AppSettings["images-folder"] + codigoTextBox.Text + " - " + nombreTextBox.Text + "-" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day;
+                        //Cualquiera de las 2 funcionan, la dejo para que se vea y se pueda probar 
+                        //string ubicacionImagen = @"..\..\..\Imagenes\Articulos\" + codigoTextBox.Text + " - " + nombreTextBox.Text + "-" + DateTime.Now.Year + DateTime.Now.Month+ DateTime.Now.Day;
+                        string ubicacionImagen = ConfigurationManager.AppSettings["images-folder"] + codigoTextBox.Text + " - " + nombreTextBox.Text + "-" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day;
 
-                    //Este dispose evita el IOException generado por tener la imagen cargada
-                    pictureBoxProducto.Dispose();
+                        File.Copy(archivo.FileName, ubicacionImagen, true);
+                        urlTextBox.Text = ubicacionImagen;
 
-                    //Si ya existe un archivo con el nombre del producto, la remplaza
-                    if (File.Exists(aux.imagenUrl))
-                        File.Delete(aux.imagenUrl);
-
-                    File.Copy(archivo.FileName, ubicacionImagen);
-                    urlTextBox.Text = ubicacionImagen;
-
-                    conexion.agregarParametros("@ImagenUrl", urlTextBox.Text);
-                    conexion.ejecutarQuery();
+                    }
+                    else
+                    {
+                        if (File.Exists(pathFileAux))
+                        {
+                            File.Delete(pathFileAux);
+                        }
+                    }
                 }
                 catch (IOException)
                 {
                     MessageBox.Show("Error al copiar el archivo");
-                    throw;
+                    Close();
                 }
                 catch (UnauthorizedAccessException)
                 {
                     MessageBox.Show("No hay permisos para copiar el archivo");
-                    throw;
+                    Close();
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Ocurrió un error en la carga o modificación del artículo");
+                    Close();
                 }
-                finally
+                ArticulosManager articulosManager = new ArticulosManager();
+                Articulos nuevoArticulo = new Articulos();
+                nuevoArticulo.codigoArticulo = codigoTextBox.Text;
+                nuevoArticulo.nombreArticulo = nombreTextBox.Text;
+                nuevoArticulo.descripcionArticulo = descripcionTextBox.Text;
+                nuevoArticulo.idMarcaProducto = comboBoxMarca.SelectedIndex;
+                nuevoArticulo.idCategoriaProducto = comboBoxCategoria.SelectedIndex;
+                nuevoArticulo.imagenUrl = urlTextBox.Text;
+                nuevoArticulo.precioEnDecimal = Decimal.Parse(precioTextBox.Text);
+                //Si el articulo auxiliar está en null, significa que va a agregar un producto
+                //Caso contrario, está modificando el mismo
+                if (aux == null)
                 {
-                    conexion.cerrarConexion();
+                    MessageBox.Show("Se han agregado " + articulosManager.agregarArticulo(nuevoArticulo) + " artículos");
                 }
+                else
+                {
+                    nuevoArticulo.idArticulo = aux.idArticulo;
+                    MessageBox.Show("Se han modificado " + articulosManager.modificarArticulo(nuevoArticulo) + " artículos");
+                }
+                
+                //Este dispose evita el IOException generado por tener la imagen cargada
+                pictureBoxProducto.Dispose();
                 Close();
             }
         }
@@ -311,8 +311,13 @@ namespace UI
             {
                 urlTextBox.Text = archivo.SafeFileName;
                 try
-                {
-                    pictureBoxProducto.Load(archivo.FileName);
+                {   
+                //Abre la imagen en modo lectura, permite trabajar con ella en caso de necesitar eliminarla o modificarla
+                    using (FileStream fs = new FileStream(archivo.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        pictureBoxProducto.Image = Image.FromStream(fs);
+                    }
+
                 }
                 catch (Exception)
                 {

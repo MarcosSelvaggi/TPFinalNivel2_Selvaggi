@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Negocio;
 
@@ -55,7 +57,17 @@ namespace UI
         {
             try
             {
-                pictureBoxImagenes.Load(ubicacionImagen);
+                if (!ubicacionImagen.Contains("https"))
+                {
+                    using (FileStream fs = new FileStream(ubicacionImagen, FileMode.Open, FileAccess.Read))
+                    {
+                        pictureBoxImagenes.Image = Image.FromStream(fs);   
+                    }
+                }
+                else
+                {
+                    pictureBoxImagenes.Load(ubicacionImagen);
+                }
             }
             catch (Exception)
             {
@@ -80,7 +92,6 @@ namespace UI
 
         private void modificarArticulo()
         {
-            cargarImagen(null);
             NuevoArticulo ventana = new NuevoArticulo((Articulos)dataGridDatos.CurrentRow.DataBoundItem);
             ventana.ShowDialog();
             cargarArticulos();
@@ -201,8 +212,6 @@ namespace UI
         {
             cargarArticulos();
         }
-
-
         //Botones
     }
 }

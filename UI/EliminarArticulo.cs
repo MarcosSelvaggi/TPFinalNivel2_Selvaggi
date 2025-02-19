@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using Datos;
 using Negocio;
@@ -25,12 +26,14 @@ namespace UI
 
         private void botonConfirmar_Click(object sender, EventArgs e)
         {
-            AccesoADatos conexion = new AccesoADatos();
-            conexion.setearConsulta("Delete from Articulos where Id = @Id");
-            conexion.agregarParametros("@Id", aux.idArticulo);
+            ArticulosManager articulosManager = new ArticulosManager();
             try
             {
-                conexion.ejecutarQuery();
+                MessageBox.Show("Se han eliminado " + articulosManager.eliminarArticulo(aux) + " artículos");
+                if (File.Exists(aux.imagenUrl))
+                {
+                    File.Delete(aux.imagenUrl);
+                }
             }
             catch (Exception)
             {
@@ -38,8 +41,6 @@ namespace UI
             }
             finally
             {
-                MessageBox.Show("Se ha eliminado el artículo");
-                conexion.cerrarConexion();
                 Close();
             }
         }
