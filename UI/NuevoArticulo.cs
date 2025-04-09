@@ -226,7 +226,7 @@ namespace UI
                         }
                     }
                 }
-                catch (IOException)
+                catch (IOException )
                 {
                     MessageBox.Show("Error al copiar el archivo");
                     Close();

@@ -3,19 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{938E4AD7-9EBA-434F-BA30-20B18E151691}|Negocio\\Negocio.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\winforms\\tpfinalnivel2_selvaggi\\negocio\\articulosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{938E4AD7-9EBA-434F-BA30-20B18E151691}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\winforms\\tpfinalnivel2_selvaggi\\ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\winforms\\tpfinalnivel2_selvaggi\\ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\formulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\ui\\eliminararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\eliminararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\winforms\\tpfinalnivel2_selvaggi\\ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\nuevoarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\winforms\\tpfinalnivel2_selvaggi\\ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\buscararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DFC16E6-169A-4872-BB78-77DF9754A063}|Datos\\Datos.csproj|c:\\users\\marco\\documents\\visual studio 2022\\projects\\winforms\\tpfinalnivel2_selvaggi\\datos\\accesoadatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\ui\\eliminararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D73737F3-0DFC-42CC-9FA0-DFA80C7978C3}|UI\\UI.csproj|solutionrelative:ui\\eliminararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{938E4AD7-9EBA-434F-BA30-20B18E151691}|Negocio\\Negocio.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\negocio\\articulosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{938E4AD7-9EBA-434F-BA30-20B18E151691}|Negocio\\Negocio.csproj|solutionrelative:negocio\\articulosmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DFC16E6-169A-4872-BB78-77DF9754A063}|Datos\\Datos.csproj|C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\datos\\accesoadatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DFC16E6-169A-4872-BB78-77DF9754A063}|Datos\\Datos.csproj|solutionrelative:datos\\accesoadatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -39,44 +63,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ArticulosManager.cs",
-              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\Negocio\\ArticulosManager.cs",
-              "RelativeDocumentMoniker": "Negocio\\ArticulosManager.cs",
-              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\Negocio\\ArticulosManager.cs",
-              "RelativeToolTip": "Negocio\\ArticulosManager.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAmwF8AAAAtAAAAAAAAAA==",
+              "Title": "Formulario.cs",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs",
+              "RelativeDocumentMoniker": "UI\\Formulario.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs",
+              "RelativeToolTip": "UI\\Formulario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T00:20:32.586Z",
+              "WhenOpened": "2025-03-16T20:33:05.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Formulario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs",
+              "RelativeDocumentMoniker": "UI\\Formulario.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\Formulario.cs [Design]",
+              "RelativeToolTip": "UI\\Formulario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T00:24:18.963Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NuevoArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs",
+              "RelativeDocumentMoniker": "UI\\NuevoArticulo.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs",
+              "RelativeToolTip": "UI\\NuevoArticulo.cs",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAqwO4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T00:23:03.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NuevoArticulo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs",
+              "RelativeDocumentMoniker": "UI\\NuevoArticulo.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\NuevoArticulo.cs [Design]",
+              "RelativeToolTip": "UI\\NuevoArticulo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T00:23:02.914Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EliminarArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\EliminarArticulo.cs",
+              "RelativeDocumentMoniker": "UI\\EliminarArticulo.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\EliminarArticulo.cs",
+              "RelativeToolTip": "UI\\EliminarArticulo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T00:22:57.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EliminarArticulo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\EliminarArticulo.cs",
+              "RelativeDocumentMoniker": "UI\\EliminarArticulo.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\EliminarArticulo.cs [Design]",
+              "RelativeToolTip": "UI\\EliminarArticulo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T00:22:56Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ArticulosManager.cs",
+              "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\Negocio\\ArticulosManager.cs",
+              "RelativeDocumentMoniker": "Negocio\\ArticulosManager.cs",
+              "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\Negocio\\ArticulosManager.cs",
+              "RelativeToolTip": "Negocio\\ArticulosManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T00:20:32.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BuscarArticulo.cs",
               "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs",
               "RelativeDocumentMoniker": "UI\\BuscarArticulo.cs",
               "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs",
               "RelativeToolTip": "UI\\BuscarArticulo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T22:53:28.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T22:53:28.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "BuscarArticulo.cs [Design]",
               "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs",
               "RelativeDocumentMoniker": "UI\\BuscarArticulo.cs",
               "ToolTip": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\UI\\BuscarArticulo.cs [Design]",
               "RelativeToolTip": "UI\\BuscarArticulo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T22:53:26.223Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-18T22:53:26.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "AccesoADatos.cs",
               "DocumentMoniker": "C:\\Users\\marco\\Documents\\Visual Studio 2022\\Projects\\WinForms\\TPFinalNivel2_Selvaggi\\Datos\\AccesoADatos.cs",
               "RelativeDocumentMoniker": "Datos\\AccesoADatos.cs",
@@ -84,8 +180,7 @@
               "RelativeToolTip": "Datos\\AccesoADatos.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwBkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T22:10:00.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T22:10:00.34Z"
             }
           ]
         }
